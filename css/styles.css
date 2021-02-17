@@ -15,6 +15,27 @@ body {
   font-style: normal;
 }
 
+h1,
+h2,
+h3,
+p,
+a {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 a {
   text-decoration: none;
 }
@@ -152,28 +173,55 @@ a {
 }
 
 footer {
+  display: flex;
+  padding: 60px 0;
   background-color: var(--lightblack);
+}
+
+.link-prime {
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+.address {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--white-text);
+}
+
+.item-contacts .tel {
+  margin-bottom: 9px;
+}
+
+.list-contacts  {
+  display: block;
+  padding-top: 60px;
+  padding-left: 215px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--graphite-text);
+}
+
+.list-contacts:hover,
+.list-contacts:focus {
+  color: var(--blue-text);
 }
 
 .colorword {
   color: var(--white-text);
+} 
+
+.list-contacts .item-contacts:not(:first-child) {
+  padding-top: 9px;
 }
 
-.address {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  color: var(--white-text);
-}
-
-.item-address {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  color: var(--wt-op60);
-}
 
 /* Portfolio */
 
@@ -282,53 +330,24 @@ body {
   color: var(--graphite-text);
 }
 
-footer {
-  background-color: var(--lightblack);
-}
-
-.colorword {
-  color: var(--white-text);
-}
-
-.item-address:hover,
-.item-address:focus {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  background-color: var(--blue-text);
-}
 
 /* STUDIO */
-* {
-  padding: 0;
-  margin: 0;
-}
 
-h1,
-h2,
-h3,
-p,
-a {
-  margin: 0;
-}
 
-img {
-  display: block;
-  max-width: 100%;
-}
+
+
 
 .header-menu {
   display: flex;
 }
 
-.container-menu {
+/* .container-menu {
   width: 1200;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 .site-nav {
   display: flex;
@@ -383,15 +402,6 @@ img {
   padding: 31px 0;
 }
 
-.container-hero-title {
-  text-align: center;
-  width: 1200;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: var(--lightblack);
-}
 
 .hero-title {
   text-align: center;
@@ -416,14 +426,6 @@ img {
   padding: 94px 0;
 }
 
-.container-features {
-  width: 1200;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .list-features {
   display: flex;
   flex-basis: calc((100% - 60px) / 4);
@@ -439,14 +441,6 @@ img {
   padding-bottom: 10px;
 }
 
-.container-company {
-  width: 1200;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .list-about-us {
   display: flex;
@@ -470,15 +464,6 @@ img {
   padding: 94px 0;
 }
 
-.containet-our-staff {
-  width: 1200;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .team {
   text-align: center;
   padding-bottom: 50px;
@@ -494,15 +479,6 @@ img {
   padding-bottom: 94px;
 }
 
-.containet-our-staff {
-  width: 1200;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 4px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .our-profi {
   border-radius: 4px;
@@ -530,25 +506,12 @@ img {
   padding-bottom: 30px;
   background-color: var(--white-text);
 }
-
+/* 
 .container-footer {
   padding: 0 auto;
   margin: 0 auto;
-}
+} */
 
-.footer-list {
-  padding-top: 60px;
-  padding-left: 215px;
-}
-
-.address {
-  padding-top: 20px;
-  padding-bottom: 60px;
-}
-
-.address .item-address:not(:first-child) {
-  padding-top: 9px;
-}
 
 /* PORTFOLIO */
 
@@ -556,13 +519,6 @@ img {
   padding-top: 94px 0;
 }
 
-.container-offers {
-  width: 1200;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .list-offers {
   display: flex;
@@ -582,10 +538,22 @@ img {
   display: block;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 34px;
-  margin-bottom: 94px;
+ 
 }
 
+
 .item-catalog {
+  margin-right: 30px;
+  margin-bottom: 30px;
   width: calc((100% - 60px) / 3);
+}
+
+.item-catalog:nth-child(3n)
+{
+  margin-right: 0px;
+}
+
+.item-catalog:nth-last-child(-n + 3)
+{
+  margin-bottom: 0px;
 }
