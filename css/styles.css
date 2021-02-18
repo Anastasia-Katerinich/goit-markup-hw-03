@@ -21,6 +21,7 @@ h3,
 p,
 a {
   margin: 0;
+  padding: 0;
 }
 
 img {
@@ -32,20 +33,32 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-.header-menu {
+.menu {
   display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.header-menu {
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 .site-nav {
-  /* display: flex; */
+  display: flex;
+  align-items: center;
+  
+  padding: 0 auto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -53,21 +66,13 @@ a {
   color: var(--black-text);
 }
 
-.item-ref:hover,
-.item-ref:focus {
-  color: var(--blue-text);
-}
-
-.colortext {
-  color: var(--darkblack);
-}
 
 .link-prime {
-  /* display: inline-block; */
+  display: inline-block;
   justify-content: flex-start;
   margin-left: 0;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  margin-right: 93px;
+  padding: 32px 0;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -76,24 +81,45 @@ a {
   color: var(--blue-text);
 }
 
-.list-nav {
-  /* display: flex; */
-  margin-right: 50px;
-  margin-left: 93px;
+.colortext {
+  color: var(--darkblack);
 }
 
-.link-current {
-  display: inline-block;
-  color: var(--blue-text);
+.list-nav {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  color: var(--darkblack);
+}
+  
+.link:hover,
+.link:focus, 
+.item-ref:hover,
+.item-ref:focus
+{ 
+ color: var(--blue-text);
+}
+
+.current {
+  color: var(--blue-text)
+}
+
+.item-ref:not(:last-child) {
+  margin-right: 50px;
 }
 
 .list-data {
   display: flex;
+  align-items: center;
+  margin-left: auto;
+ 
 }
 
 .link-mail {
   display: inline-block;
-
+  margin-right: 50px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -104,9 +130,6 @@ a {
 .link-tel {
   display: inline-block;
   justify-content: flex-end;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  margin-left: 331px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -124,47 +147,29 @@ a {
   color: var(--blue-text);
 }
 
-/* "ГЕРОЙ" */
+/* "ГЕРОЙ" */ 
 
-/* Секция "Герой" */
 
 .hero {
-  padding: 200px 0;
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--lightblack);
 }
 
 .hero-title {
-  width: 696px;
-  margin-bottom: 30px;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--white-text);
-}
-
-/* .hero {
-  padding-top: 200px;
-}
-
-.hero-title {
-  text-align: center;
-  padding-bottom: 280px;
-  padding-bottom: 30px;
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-text);
   background: var(--lightblack);
-} */
+} 
 
 .visually-hidden {
   position: absolute;
@@ -186,7 +191,6 @@ a {
   padding-left: 32px;
   padding-right: 32px;
   margin-top: 30px;
-  margin-bottom: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
@@ -202,6 +206,17 @@ a {
 
 /* "ОСОБЕННОСТИ" */
 
+.features {
+  padding: 94px 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.list-features {
+  display: flex;
+  justify-content: center;
+}
+
 .features-title {
   padding-bottom: 10px;
   font-weight: 700;
@@ -213,11 +228,16 @@ a {
 }
 
 .features-text {
+  width: 270px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--graphite-text);
+}
+
+.features:not(:last-child) {
+  margin-right: 50px;
 }
 
 /* "О НАС" */
@@ -282,10 +302,6 @@ footer {
   background-color: var(--lightblack);
 }
 
-/* .link-prime {
-  display: block;
-  margin-bottom: 20px;
-} */
 
 .address {
   padding-top: 20px;
@@ -364,46 +380,11 @@ footer {
 
 /* STUDIO */
 
-.header-menu {
-  display: flex;
-}
-
-.site-nav {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 32px;
-}
-
-.site-nav .item:last-child {
-  margin-right: 50;
-}
-
-.list-data .item:last-child {
-  margin-right: 50;
-}
-/* 
-.link-prime {
-  display: block;
-  margin-left: auto;
-  padding-top: 24px;
-  padding-bottom: 25px;
+/* .hero {
+  padding: 31px 0;
 } */
 
-.hero {
-  padding: 31px 0;
-}
 
-.features {
-  padding: 94px 0;
-}
-
-.list-features {
-  display: flex;
-  flex-basis: calc((100% - 60px) / 4);
-  justify-content: center;
-}
 
 .item-description {
   display: block;
