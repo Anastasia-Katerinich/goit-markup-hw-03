@@ -57,8 +57,7 @@ ul {
 .site-nav {
   display: flex;
   align-items: center;
-
-  padding: 0 auto;
+  padding: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -110,6 +109,7 @@ ul {
 
 .list-data {
   display: flex;
+  margin-right: 50px;
   align-items: center;
   margin-left: auto;
 }
@@ -214,8 +214,11 @@ ul {
   justify-content: center;
 }
 
+.item-features {
+  width: 270px;
+}
 .features-title {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -225,7 +228,6 @@ ul {
 }
 
 .features-text {
-  width: 270px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
@@ -303,10 +305,6 @@ ul {
   margin-right: 0px;
 }
 
-.item-team img {
-  margin-bottom: 30px;
-}
-
 .members {
   padding: 30px 30px;
 }
@@ -322,7 +320,6 @@ ul {
 }
 
 .team-text {
-  margin-bottom: 30px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
@@ -352,8 +349,8 @@ footer {
 }
 
 .address p {
-  padding-top: 20px;
-  padding-bottom: 9px;
+  margin-top: 20px;
+  margin-bottom: 9px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
@@ -389,7 +386,7 @@ footer {
 }
 
 .list-contacts .item-contacts:not(:first-child) {
-  padding-top: 9px;
+  margin-top: 9px;
 }
 
 /* ПОРТФОЛИО */
